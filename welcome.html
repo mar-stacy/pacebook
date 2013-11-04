@@ -1,0 +1,119 @@
+<html>
+<style type="text/css">
+p
+{
+	font-family:sans-serif;
+	margin-left:1%
+}
+h2
+{
+	font-family:sans-serif;
+	font-size:18pt;
+}
+
+login-box
+{
+	background-color:#BFEFFF;
+	height:40%;
+	width:30%;
+	float:left;
+	border:6px double #005B9A;
+	margin-left:1%;
+	text-align:center;
+	font-family:sans-serif;
+}
+</style>
+
+<head>
+<meta name=Title content="Pacebook Welcome Page">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<link rel=Edit-Time-Data href="index_files/editdata.mso">
+<title>Welcome to Pacebook</title>
+
+<script>
+function validateForm()
+{
+for (var i=0; i<3; i++){
+	var x=document.forms["user_reg"][i].value;
+	if (x==null || x=="")
+	  {
+	  alert("Please fill out all fields before submitting.");
+	  return false;
+	  }
+  }
+}
+</script>
+
+</head>
+<body background="blue_bg.jpg" link=blue vlink=maroon alink="#2DB754" class="Normal" lang=EN-US>
+<div id="container" style="width:100%">
+
+<div id="header" style="text-align:center;">
+<img src="pacebook_header.png" alt="Pacebook Logo">
+</div>
+<br>
+
+<login-box>
+<h2>User Login</h2>
+<form method="link" action="users/user_login.php">
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td>&nbsp Username: </td>
+        <td><input name="username" size="20" align="top" type="text"></td>
+      </tr>
+      <tr>
+        <td>&nbsp Password:</td>
+        <td><input name="password" size="20" align="top" type="password"></td>
+      </tr>
+    </tbody>
+  </table>
+<input type="submit" value="Login Now">
+</form>
+</login-box>
+
+<login-box>
+<h2>New User Registration</h2>
+<form name="user_reg" method="link" action="user_registration.php" onsubmit="return validateForm()">
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td>&nbsp Email Address: </td>
+        <td><input name="email" size="20" align="top" type="text"></td>
+      </tr>
+      <tr>
+        <td>&nbsp Affiliation:</td>
+        <td><input name="affiliation" size="20" align="top" type="text"></td>
+      </tr>
+	  <tr>
+        <td>&nbsp Password:</td>
+        <td><input name="password" size="20" align="top" type="text"></td>
+      </tr>
+    </tbody>
+  </table>
+<input type="submit" value="Get Started">
+</form>
+</login-box>
+
+<login-box>
+<h2>Staff Login</h2>
+<form method="link" action="staff/staff_login.php">
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td>&nbsp Username: </td>
+        <td><input name="username" size="20" align="top" type="text"></td>
+      </tr>
+      <tr>
+        <td>&nbsp Password:</td>
+        <td><input name="password" size="20" align="top" type="password"></td>
+      </tr>
+    </tbody>
+  </table>
+<input type="submit" value="Login Now">
+</form>
+</login-box>
+
+<p><b>Developed by Stacy Mar and Himal Sherchan</b></p>
+
+</body>
